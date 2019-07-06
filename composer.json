@@ -1,6 +1,6 @@
 {
     "name": "craftable/admin-generator",
-    "description": "Laravel 5 CRUD generator for brackets/craftable",
+    "description": "Laravel 5 CRUD generator for craftable/craftable",
     "keywords": [
         "generator",
         "make",

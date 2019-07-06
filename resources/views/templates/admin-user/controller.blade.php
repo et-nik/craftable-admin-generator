@@ -131,7 +131,7 @@ class {{ $controllerBaseName }} extends Controller
 @endif
 @endif
         if ($request->ajax()) {
-            return ['redirect' => url('admin/{{ $resource }}'), 'message' => trans('brackets/admin-ui::admin.operation.succeeded')];
+            return ['redirect' => url('admin/{{ $resource }}'), 'message' => trans('craftable/admin-ui::admin.operation.succeeded')];
         }
 
         return redirect('admin/{{ $resource }}');
@@ -214,7 +214,7 @@ class {{ $controllerBaseName }} extends Controller
 @endif
 
         if ($request->ajax()) {
-            return ['redirect' => url('admin/{{ $resource }}'), 'message' => trans('brackets/admin-ui::admin.operation.succeeded')];
+            return ['redirect' => url('admin/{{ $resource }}'), 'message' => trans('craftable/admin-ui::admin.operation.succeeded')];
         }
 
         return redirect('admin/{{ $resource }}');
@@ -233,7 +233,7 @@ class {{ $controllerBaseName }} extends Controller
         ${{ $modelVariableName }}->delete();
 
         if ($request->ajax()) {
-            return response(['message' => trans('brackets/admin-ui::admin.operation.succeeded')]);
+            return response(['message' => trans('craftable/admin-ui::admin.operation.succeeded')]);
         }
 
         return redirect()->back();
@@ -254,20 +254,20 @@ class {{ $controllerBaseName }} extends Controller
             $response = $activationService->handle(${{ $modelVariableName }});
             if($response == Activation::ACTIVATION_LINK_SENT) {
                 if ($request->ajax()) {
-                    return ['message' => trans('brackets/admin-ui::admin.operation.succeeded')];
+                    return ['message' => trans('craftable/admin-ui::admin.operation.succeeded')];
                 }
 
                 return redirect()->back();
             } else {
                 if ($request->ajax()) {
-                    abort(409, trans('brackets/admin-ui::admin.operation.failed'));
+                    abort(409, trans('craftable/admin-ui::admin.operation.failed'));
                 }
 
                 return redirect()->back();
             }
         } else {
             if ($request->ajax()) {
-                abort(400, trans('brackets/admin-ui::admin.operation.not_allowed'));
+                abort(400, trans('craftable/admin-ui::admin.operation.not_allowed'));
             }
 
             return redirect()->back();

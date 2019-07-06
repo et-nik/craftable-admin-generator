@@ -1,4 +1,4 @@
-{{'@'}}extends('brackets/admin-ui::admin.layout.default')
+{{'@'}}extends('craftable/admin-ui::admin.layout.default')
 
 {{'@'}}section('title', trans('admin.{{ $modelLangFormat }}.actions.edit_password'))
 
@@ -26,14 +26,14 @@
         return !in_array($column['name'], ['password']);
     });
 @endphp
-                        @include('brackets/admin-generator::templates.profile.password.form')
+                        @include('craftable/admin-generator::templates.profile.password.form')
 
                     </div>
 
                     <div class="card-footer">
                         <button type="submit" class="btn btn-primary" :disabled="submiting">
                             <i class="fa" :class="submiting ? 'fa-spinner' : 'fa-download'"></i>
-                            @{{ trans('brackets/admin-ui::admin.btn.save') }}
+                            @{{ trans('craftable/admin-ui::admin.btn.save') }}
                         </button>
                     </div>
 
