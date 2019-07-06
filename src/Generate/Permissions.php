@@ -71,7 +71,7 @@ class Permissions extends ClassGenerator {
 
     protected function buildClass() {
 
-        return view('brackets/admin-generator::permissions', [
+        return view('craftable/admin-generator::permissions', [
             'modelBaseName' => $this->modelBaseName,
             'modelDotNotation' => $this->modelDotNotation,
             'className' => $this->generateClassNameFromTable($this->tableName),

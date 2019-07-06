@@ -148,7 +148,7 @@ class ViewForm extends ViewGenerator {
 
     protected function buildForm() {
 
-        return view('brackets/admin-generator::'.$this->form, [
+        return view('craftable/admin-generator::'.$this->form, [
             'modelBaseName' => $this->modelBaseName,
             'modelRouteAndViewName' => $this->modelRouteAndViewName,
             'modelPlural' => $this->modelPlural,
@@ -168,7 +168,7 @@ class ViewForm extends ViewGenerator {
 
     protected function buildCreate() {
 
-        return view('brackets/admin-generator::'.$this->create, [
+        return view('craftable/admin-generator::'.$this->create, [
             'modelBaseName' => $this->modelBaseName,
             'modelRouteAndViewName' => $this->modelRouteAndViewName,
             'modelVariableName' => $this->modelVariableName,
@@ -188,7 +188,7 @@ class ViewForm extends ViewGenerator {
 
     protected function buildEdit() {
 
-        return view('brackets/admin-generator::'.$this->edit, [
+        return view('craftable/admin-generator::'.$this->edit, [
             'modelBaseName' => $this->modelBaseName,
             'modelRouteAndViewName' => $this->modelRouteAndViewName,
             'modelVariableName' => $this->modelVariableName,
@@ -210,7 +210,7 @@ class ViewForm extends ViewGenerator {
     }
 
     protected function buildFormJs() {
-        return view('brackets/admin-generator::'.$this->formJs, [
+        return view('craftable/admin-generator::'.$this->formJs, [
             'modelViewsDirectory' => $this->modelViewsDirectory,
             'modelJSName' => $this->modelJSName,
 

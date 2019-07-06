@@ -68,7 +68,7 @@ class Lang extends FileAppender {
     }
 
     protected function buildClass() {
-        return view('brackets/admin-generator::'.$this->view, [
+        return view('craftable/admin-generator::'.$this->view, [
             'modelLangFormat' => $this->modelLangFormat,
             'modelBaseName' => $this->modelBaseName,
             'modelPlural' => $this->modelPlural,

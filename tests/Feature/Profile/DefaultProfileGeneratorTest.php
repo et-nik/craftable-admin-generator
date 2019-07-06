@@ -57,7 +57,7 @@ Route::middleware([\'auth:\' . config(\'admin-auth.defaults.guard\'), \'admin\']
     Route::post(\'/admin/profile\',                               \'Admin\ProfileController@updateProfile\');
     Route::get(\'/admin/password\',                               \'Admin\ProfileController@editPassword\');
     Route::post(\'/admin/password\',                              \'Admin\ProfileController@updatePassword\');', File::get($filePathRoute));
-        $this->assertStringStartsWith('@extends(\'brackets/admin-ui::admin.layout.default\')
+        $this->assertStringStartsWith('@extends(\'craftable/admin-ui::admin.layout.default\')
 
 @section(\'title\', trans(\'admin.admin-user.actions.edit_profile\'))
 
@@ -71,7 +71,7 @@ Route::middleware([\'auth:\' . config(\'admin-auth.defaults.guard\'), \'admin\']
         $this->assertStringStartsWith('import AppForm from \'../app-components/Form/AppForm\';
 
 Vue.component(\'profile-edit-profile-form\'', File::get($formJsPathProfile));
-        $this->assertStringStartsWith('@extends(\'brackets/admin-ui::admin.layout.default\')
+        $this->assertStringStartsWith('@extends(\'craftable/admin-ui::admin.layout.default\')
 
 @section(\'title\', trans(\'admin.admin-user.actions.edit_password\'))
 

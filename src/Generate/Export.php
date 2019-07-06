@@ -46,7 +46,7 @@ class Export extends ClassGenerator {
     }
 
     protected function buildClass() {
-        return view('brackets/admin-generator::'.$this->view, [
+        return view('craftable/admin-generator::'.$this->view, [
             'exportNamespace' => $this->classNamespace,
             'modelFullName' => $this->modelFullName,
             'classBaseName' => $this->exportBaseName,

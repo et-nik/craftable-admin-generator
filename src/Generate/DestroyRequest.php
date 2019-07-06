@@ -34,7 +34,7 @@ class DestroyRequest extends ClassGenerator {
 
     protected function buildClass() {
 
-        return view('brackets/admin-generator::destroy-request', [
+        return view('craftable/admin-generator::destroy-request', [
             'modelBaseName' => $this->modelBaseName,
             'modelDotNotation' => $this->modelDotNotation,
             'modelWithNamespaceFromDefault' => $this->modelWithNamespaceFromDefault,

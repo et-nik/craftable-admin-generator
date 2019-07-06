@@ -102,7 +102,7 @@ class ViewIndex extends ViewGenerator {
 
     protected function buildView() {
 
-        return view('brackets/admin-generator::'.$this->view, [
+        return view('craftable/admin-generator::'.$this->view, [
             'modelBaseName' => $this->modelBaseName,
             'modelRouteAndViewName' => $this->modelRouteAndViewName,
             'modelPlural' => $this->modelPlural,
@@ -142,7 +142,7 @@ class ViewIndex extends ViewGenerator {
     }
 
     protected function buildListingJs() {
-        return view('brackets/admin-generator::'.$this->viewJs, [
+        return view('craftable/admin-generator::'.$this->viewJs, [
             'modelViewsDirectory' => $this->modelViewsDirectory,
             'modelJSName' => $this->modelJSName,
         ])->render();

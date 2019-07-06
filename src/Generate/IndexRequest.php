@@ -34,7 +34,7 @@ class IndexRequest extends ClassGenerator {
 
     protected function buildClass() {
 
-        return view('brackets/admin-generator::index-request', [
+        return view('craftable/admin-generator::index-request', [
             'modelBaseName' => $this->modelBaseName,
             'modelDotNotation' => $this->modelDotNotation,
             'modelWithNamespaceFromDefault' => $this->modelWithNamespaceFromDefault,

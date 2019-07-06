@@ -52,7 +52,7 @@ class StoreRequest extends ClassGenerator {
 
     protected function buildClass() {
 
-        return view('brackets/admin-generator::'.$this->view, [
+        return view('craftable/admin-generator::'.$this->view, [
             'modelBaseName' => $this->modelBaseName,
             'modelDotNotation' => $this->modelDotNotation,
             'modelWithNamespaceFromDefault' => $this->modelWithNamespaceFromDefault,

@@ -119,13 +119,13 @@ Route::middleware([\'auth:\' . config(\'admin-auth.defaults.guard\'), \'admin\']
     Route::post(\'/admin/admin-users/{adminUser}\',               \'Admin\AdminUsersController@update\')->name(\'admin/admin-users/update\');
     Route::delete(\'/admin/admin-users/{adminUser}\',             \'Admin\AdminUsersController@destroy\')->name(\'admin/admin-users/destroy\');
     Route::get(\'/admin/admin-users/{adminUser}/resend-activation\',\'Admin\AdminUsersController@resendActivationEmail\')->name(\'admin/admin-users/resendActivationEmail\');', File::get($routesPath));
-        $this->assertStringStartsWith('@extends(\'brackets/admin-ui::admin.layout.default\')', File::get($indexPath));
+        $this->assertStringStartsWith('@extends(\'craftable/admin-ui::admin.layout.default\')', File::get($indexPath));
         $this->assertStringStartsWith('import AppListing from \'../app-components/Listing/AppListing\';
 
 Vue.component(\'admin-user-listing\'', File::get($listingJsPath));
         $this->assertStringStartsWith('<div ', File::get($elementsPath));
-        $this->assertStringStartsWith('@extends(\'brackets/admin-ui::admin.layout.default\')', File::get($createPath));
-        $this->assertStringStartsWith('@extends(\'brackets/admin-ui::admin.layout.default\')', File::get($editPath));
+        $this->assertStringStartsWith('@extends(\'craftable/admin-ui::admin.layout.default\')', File::get($createPath));
+        $this->assertStringStartsWith('@extends(\'craftable/admin-ui::admin.layout.default\')', File::get($editPath));
         $this->assertStringStartsWith('import AppForm from \'../app-components/Form/AppForm\';
 
 Vue.component(\'admin-user-form\'', File::get($formJsPath));

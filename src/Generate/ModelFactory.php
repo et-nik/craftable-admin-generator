@@ -52,7 +52,7 @@ class ModelFactory extends FileAppender {
 
     protected function buildClass() {
 
-        return view('brackets/admin-generator::'.$this->view, [
+        return view('craftable/admin-generator::'.$this->view, [
             'modelFullName' => $this->modelFullName,
 
             'columns' => $this->readColumnsFromTable($this->tableName)

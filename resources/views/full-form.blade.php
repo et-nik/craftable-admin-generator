@@ -1,4 +1,4 @@
-{{'@'}}extends('brackets/admin-ui::admin.layout.default')
+{{'@'}}extends('craftable/admin-ui::admin.layout.default')
 
 {{'@'}}section('title', trans('admin.{{ $modelLangFormat }}.actions.edit', ['name' => ${{ $modelVariableName }}->{{$modelTitle}}]))
 
@@ -28,14 +28,14 @@
 
                     <div class="card-body">
 
-                        @include('brackets/admin-generator::form')
+                        @include('craftable/admin-generator::form')
 
                     </div>
 
                     <div class="card-footer">
                         <button type="submit" class="btn btn-primary">
                             <i class="fa" :class="submiting ? 'fa-spinner' : 'fa-download'"></i>
-                            @{{ trans('brackets/admin-ui::admin.btn.save') }}
+                            @{{ trans('craftable/admin-ui::admin.btn.save') }}
                         </button>
                     </div>
 
